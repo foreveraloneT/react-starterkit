@@ -11,6 +11,7 @@ import './index.scss'
 class Test extends Component {
   static propTypes = {
     isPing: PropTypes.bool.isRequired,
+    letPing: PropTypes.func.isRequired,
   }
 
   onClickHandler = () => {
@@ -60,4 +61,6 @@ const mapDispatchToProps = dispatch => ({
   letPing: (duration = 0) => dispatch(letPing(duration)),
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Test)
+const connectFn = connect(mapStateToProps, mapDispatchToProps)
+
+export default connectFn(Test)

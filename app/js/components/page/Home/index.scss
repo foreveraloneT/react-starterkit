@@ -1,6 +1,14 @@
-.home-container {
-  text-align: center;
-  .red-text {
-    color: red;
-  }
+@keyframes example {
+  from {background-color: yellow;}
+  to {background-color: green;}
+}
+
+.repo-wrap {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid black;
+  width: 50%;
+  background-color: green;
+  animation-name: example;
+  animation-duration: 1s;
 }
